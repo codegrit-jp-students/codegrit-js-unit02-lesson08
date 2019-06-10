@@ -33,13 +33,16 @@ try {
 } finally {
   console.log("処理完了")
 }
+
 /* 実行結果
 名前のフォーマットが異なります。
 処理完了
 */
 ```
 
-このエラー処理を使うことで、例えばユーザーがオフラインになって処理が完了しなかった場合は、そのことを画面に表示し、数秒後に自動的に再度処理を行う。というようなことが出来るようになります。
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/no4uLgzx/2/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+このようにエラー処理を使うことで、例えばユーザーがオフラインになって処理が完了しなかった場合は、そのことを画面に表示し、数秒後に自動的に再度処理を行う。というようなことが出来るようになります。
 
 ## Async/Awaitファンクションでのエラーハンドリング
 
@@ -77,6 +80,7 @@ class PasswordValidator extends BaseValidator {
   }
 }
 ```
+
 - **Async/Awaitの例**
 
 ```javascript
@@ -112,6 +116,8 @@ class PasswordValidator extends BaseValidator {
   }
 }
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/ydn84j5c/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 Async/Awaitの場合、try...catch文を2回書く必要があるため冗長に感じられた方もいるかもしれません。catchした場合の処理がメソッドによって異なるという場合などでは、try...catch文を使う方が良い場合もありますので状況に分けて使い分けるのが良いかと思います。
 

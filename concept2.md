@@ -7,18 +7,20 @@ throw文を使うと、エラーが起こった際に自分で定義したオブ
 ```javascript
 throw "エラーが発生しました。" // 文字列を例外として投げる例
 
-class myException {
+class MyException {
   constructor(message) {
     this.message = message;
-    this.name = "myException";
+    this.name = "MyException";
   }
   get errorMessage() {
     return `${this.name}: ${this.message}`;
-  }    
+  }
 }
 
 throw new MyException("値が上限値を超えています。"); // クラスインスタンスを例外として投げる例
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/tx25Ln7y/5/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ## Errorオブジェクト
 
@@ -34,3 +36,5 @@ console.log(err.message); // "値が上限値を超えています。"
 
 throw err； // Errorインスタンスを例外として投げる。
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/ot9b2x57/2/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
